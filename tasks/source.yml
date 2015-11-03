@@ -30,10 +30,10 @@
     dest: "{{nginx_dir}}/.nginx_compilation_flags"
   register: nginx_flags
 
-- name: Nginx | Kill Nginx (old threads)
-  command: pkill nginx
-  ignore_errors: yes
-  when: nginx_flags.changed
+# - name: Nginx | Kill Nginx (old threads)
+#   command: pkill nginx
+#   ignore_errors: yes
+#   when: nginx_flags.changed
 
 - name: Nginx | Compile the Nginx source
   shell: >
